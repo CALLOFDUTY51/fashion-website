@@ -1,3 +1,5 @@
+
+
 .nav-link {
   position: relative; /* Make sure the element is positioned */
   text-decoration: none; /* Remove default underline */
@@ -97,6 +99,62 @@
   color:white;
   background-color: #000;
 }
+
+.carousel-caption h3 {
+  font-size: 90px;
+}
+
+.carousel-caption p {
+  font-size: 30px;
+}
+
+.carousel-button {
+  width: 120px;
+  height: 50px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+ 
+  .carousel img {
+      height: 500px;
+  }
+
+
+  .carousel-caption {
+    top: 50%; /* Adjust the overall position for mobile */
+    left: 50%;
+  }
+  
+  .carousel-caption h3 {
+    font-size: 40px; /* Reduce heading size */
+    left: 50%;
+  }
+  
+  .carousel-caption p {
+    font-size: 20px; /* Reduce caption size */
+    left: 50%;
+    top: -50%; /* Adjust the vertical position */
+    writing-mode: unset; /* Horizontal text for better readability */
+  }
+  
+  .carousel-button {
+    top: 85%; /* Adjust button position for mobile */
+    left: 50%;
+    width: 100px; /* Smaller button */
+    height: 40px;
+    transform: translateX(-50%); /* Center the button */
+  }
+}
+
+
+
+
+
+
+
+
+
 .sale-heading {
   margin-top: 70px;
   margin-bottom: 30px;
@@ -177,7 +235,7 @@
   position: relative; /* Ensures overlay content is positioned correctly */
   z-index: 2; /* Ensures overlay content is above the shadow */
 }
-.product-header {
+.slider-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -202,7 +260,8 @@
   color: #000;
 }
 
-.product-container {
+/* Updated class names from product to slider */
+.slider-container {
   overflow: hidden;
   width: 100%;
 }
@@ -212,7 +271,7 @@
   transition: transform 1s ease-in-out;
 }
 
-.product-card {
+.slider-card {
   flex: 0 0 25%; /* 4 cards visible at a time */
   margin-right: 10rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -220,12 +279,12 @@
   transition: box-shadow 0.3s ease-in-out;
 }
 
-.product-card img {
+.slider-card img {
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
-.product-card:hover {
+.slider-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
@@ -241,7 +300,7 @@
   font-size: 1.5rem;
 }
 
-.product-card:hover .icon-overlay {
+.slider-card:hover .icon-overlay {
   opacity: 1;
 }
 
@@ -259,8 +318,55 @@
 }
 
 
+/*products*/
+.product {
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
+.product_card {
+  
+  min-height: 250px; /* Reduced minimum height */
+  height: auto; /* Allow dynamic height based on content */
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add this line for box shadow */
+  transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+}
+
+.product_card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+}
+
+.product_card img {
+  height: 350px; /* Adjust image height */
+  object-fit: cover; /* Ensure the image fits within the container */
+  transition: transform 0.3s ease-in-out;
+}
+
+.product_card:hover img {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+@media (max-width: 768px) {
+  .product_card {
+    flex: 0 0 48%; /* Two cards in a row, with a small gap */
+    margin-bottom: 1rem;
+  }
+
+  .product_card .card-title {
+    font-size: 1rem; /* Reduce title size */
+  }
+
+  .product_card .card-text {
+    font-size: 0.9rem; /* Reduce text size */
+  }
+}
 
 
 img {
@@ -272,9 +378,29 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  max-width: 1200px;
+  max-width: auto;
   margin: auto;
   padding: 5rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    grid-template-columns: 1fr; /* Stacks columns vertically */
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .instagram__grid {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 images per row in mobile */
+  }
+
+  .footer__heading {
+    font-size: 1.2rem;
+  }
+
+  .footer__col p {
+    font-size: 1rem; /* Increase font size for better readability */
+  }
 }
 
 .footer__heading {

@@ -6,7 +6,7 @@ function Header() {
     <>
     <div className="carousel-container">
       <Carousel fade>
-        <Carousel.Item>
+        <Carousel.Item >
           <img
             className="d-block w-100"
             src="https://www.azedw-react.wp-ts.com/assets/images/slider/slide-1.jpg"

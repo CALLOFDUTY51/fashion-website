@@ -1,9 +1,10 @@
 import Header from "./components/Header"
 import HeaderBar from "./components/HeaderBar"
 import NavbarComponent from "./components/NavBar"
+import Products from "./components/Products"
 import Sale from "./components/Sale"
 import Footer from "./components/footer"
-import ProductPage from "./components/product"
+import SliderPage from "./components/slider"
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
      <NavbarComponent/>
      <Header/>
      <Sale/>
-     <ProductPage/>
+     <SliderPage/>
+     <Products/>
      <Footer/>
     </>
   )
