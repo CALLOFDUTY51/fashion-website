@@ -337,6 +337,7 @@
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add this line for box shadow */
   transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+
 }
 
 .product_card:hover {
