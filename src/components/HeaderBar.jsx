@@ -10,9 +10,9 @@ const HeaderBar = () => {
       
 
   return (
-    <div style={headerCss}>
-        Free Shipping on Orders Over 5000RS
-    </div>
+    <marquee style={headerCss}>
+        Free Shipping on Orders Over 50$
+    </marquee>
   )
   }
 
