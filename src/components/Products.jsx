@@ -62,7 +62,7 @@ const Products = () => {
           <Card 
           key={product.id} 
           className='product_card'
-          style={{ width: '18rem' }}
+          style={{width:"18rem"}}
           onMouseEnter={() => setHovered(index)}
           onMouseLeave={() => setHovered(null)}
         >
