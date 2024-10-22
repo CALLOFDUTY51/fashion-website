@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 const Products = () => {
   const [hovered, setHovered] = useState(null);
@@ -59,21 +60,23 @@ const Products = () => {
       <div className='product-container'>
         {products.map((product, index) => (
           <Card 
-            key={product.id} 
-            className='product_card'
-            style={{ width: '18rem' }}
-            onMouseEnter={() => setHovered(index)}
-            onMouseLeave={() => setHovered(null)}
-          >
-            <Card.Img
-              variant="top"
-              src={hovered === index ? product.hoverImage : product.defaultImage}
-            />
-            <Card.Body>
-              <Card.Title>{product.title}</Card.Title>
-              <Card.Text>{product.price}</Card.Text>
-            </Card.Body>
-          </Card>
+          key={product.id} 
+          className='product_card'
+          style={{ width: '18rem' }}
+          onMouseEnter={() => setHovered(index)}
+          onMouseLeave={() => setHovered(null)}
+        >
+          <Card.Img
+            variant="top"
+            src={hovered === index ? product.hoverImage : product.defaultImage}
+          />
+          <Card.Body>
+            <Card.Title>{product.title}</Card.Title>
+            <Card.Text>{product.price}</Card.Text>
+            <Button variant="primary">Add to Cart</Button> {/* Bootstrap Button */}
+          </Card.Body>
+        </Card>
+        
         ))}
       </div>
       </div>

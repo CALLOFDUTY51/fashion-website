@@ -49,10 +49,7 @@ const SliderPage = () => {
     <>    
       <div className='slider-header'>
   Recent Sliders
-  <div className="arrow-icons">
-    <i className="fas fa-arrow-left arrow-icon" onClick={handleLeftClick}></i>
-    <i className="fas fa-arrow-right arrow-icon" onClick={handleRightClick}></i>
-  </div>
+  
 </div>
 <hr style={{border:"1px solid black", width:"50%", marginBottom:"4rem"}} />
 
